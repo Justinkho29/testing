@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="heart-bg" id="heart-bg"></div>
+
+    <!-- Page 1 -->
+    <div class="glass-card" id="page1">
+        <h1>Do you love me? 🥺</h1>
+        <div>
+            <button class="btn btn-yes" onclick="goToPage2()">Yes! ❤️</button>
+            <button class="btn btn-no" id="no-btn" onmouseover="dodgeButton()" ontouchstart="dodgeButton()">No 💔</button>
+        </div>
+    </div>
+
+    <!-- Page 2 (Form na magbubukas ng email) -->
+    <div class="glass-card" id="page2">
+        <h1>I knew it! 🥰</h1>
+        <p class="subtitle">Now, please fill out this very official survey.</p>
+        
+        <form id="love-form">
+            <div class="form-group">
+                <label for="fav-thing">1. What is your favorite thing about me?</label>
+                <input type="text" id="fav-thing" placeholder="Be honest..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="next-date">2. What should we do for our next date?</label>
+                <input type="text" id="next-date" placeholder="Movie? Dinner? Stargazing?" required>
+            </div>
+
+            <div class="form-group">
+                <label for="love-score">3. How much do you love me? (1-100)</label>
+                <input type="number" id="love-score" placeholder="Hint: 100" min="1" max="100" required>
+            </div>
+
+            <button type="submit" class="btn btn-yes submit-btn">Submit Answers 💌</button>
+        </form>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
